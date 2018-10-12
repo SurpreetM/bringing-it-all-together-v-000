@@ -52,7 +52,6 @@ class Dog
   end
 
   def self.find_or_create_by(name:, breed:)
-
     sql = <<-SQL
       SELECT *
       FROM dogs
@@ -64,7 +63,7 @@ class Dog
       dog_info = dog[0]
       dog = Dog.new(name: dog_info[1], breed: dog_info[2], id: dog_info[0])
     else
-
+      dog = self.create(name: name, breed: breed)
 
   end
 
