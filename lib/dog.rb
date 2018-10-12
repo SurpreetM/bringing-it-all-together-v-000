@@ -36,4 +36,10 @@ class Dog
     self
   end
 
+  def self.create(name:, bread:)
+    dog = Dog.new(name, bread)
+    dog.save
+
+  end
+
 end
