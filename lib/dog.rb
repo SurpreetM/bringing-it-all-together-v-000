@@ -47,7 +47,10 @@ class Dog
       FROM dogs
       WHERE id = ?
       SQL
-    DB[:conn].execute(sql, x)
+    DB[:conn].execute(sql, x).map do
+      
+    end
+    end
   end
 
 end
